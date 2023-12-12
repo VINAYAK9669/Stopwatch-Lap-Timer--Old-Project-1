@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Here we added the "Materialze CSS" CDN link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Stopwatch Lap</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <main class="container">
+      <h1 class="container__header">
+        <span>STOPWATCH</span><span>LAP TIMER</span>
+      </h1>
+      <p class="lap-time">
+        <span id="minutes">00</span>:<span id="seconds">00</span>.<span
+          id="tens"
+          >00</span
+        >
+      </p>
+
+      <!--In the control tag we create our three button-->
+      <div class="controls">
+        <button id="start-btn" class="btn green btn-large">Start</button>
+        <button id="stop-btn" class="btn red btn-large">Stop</button>
+        <button id="reset-btn" class="btn btn-large">Reset</button>
+      </div>
+      <p
+        id="limitExceed"
+        style="color: green; background-color: white; border-radius: 10px"
+      >
+        Lap limit not Exceeded
+      </p>
+      <ul id="laps" class="laps-container"></ul>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
